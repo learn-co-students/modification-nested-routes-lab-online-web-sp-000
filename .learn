@@ -1,5 +1,8 @@
 tags:
-  - tag1
+  - rails
+  - routes
+  - nested resources
+  - helpers
 languages:
-  - language1
+  - ruby
 resources: 0
