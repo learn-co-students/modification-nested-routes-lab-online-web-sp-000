@@ -12,7 +12,7 @@ describe "songs", type:  :feature do
 
     describe "/artists/:artist_id/songs/:id/edit" do
       it "doesn't display an artist select" do
-        vist edit_artist_song_path(@artist, @song)
+        visit edit_artist_song_path(@artist, @song)
         expect(page).not_to have_select(:artist_id)
       end
     end
@@ -47,7 +47,7 @@ describe "songs", type:  :feature do
   describe "/songs/:id/edit" do
     it "has a selector for artist" do
       visit edit_song_path(@song2)
-      expect(page).to have_select(:artist_id)
+      expect(page).to have_select("song_artist_id")
     end
   end
 
