@@ -18,3 +18,5 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
+
+gem "pry-rails", "~> 0.3.5", :groups => [:development, :test]
