@@ -8,7 +8,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    @artist = Artist.new(artist_id:params[:artist_id])
   end
 
   def create
