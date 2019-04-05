@@ -25,6 +25,7 @@ class SongsController < ApplicationController
   end
 
   def new
+    # binding.pry
     if params[:artist_id]
        if Artist.exists?(params[:artist_id])
         @song = Song.new(artist_id: params[:artist_id])
