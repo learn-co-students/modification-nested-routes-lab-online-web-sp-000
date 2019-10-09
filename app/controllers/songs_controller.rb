@@ -42,7 +42,6 @@ class SongsController < ApplicationController
   def edit
       if params[:artist_id]
         validate_artist
-        binding.pry
         @song = Song.find_by(id: params[:id])
         if @song.nil?
           redirect_to artist_songs_path(@artist)
