@@ -4,6 +4,7 @@ module ArtistsHelper
   end
 
   def artist_select(artist, song)
+    binding.pry
     if artist
       artist.name
     else
