@@ -10,7 +10,7 @@ gem 'rails-controller-testing'
 gem 'bootsnap'
 group :development, :test do
   gem 'pry'
-  gem 'capybara'
+  gem 'capybara', '~>3.13.2'
   gem 'rspec-rails'
   gem 'shoulda'
 end
