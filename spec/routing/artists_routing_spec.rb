@@ -7,7 +7,7 @@ RSpec.describe "artists routing", type: :routing do
     Artist.destroy_all
   end
 
-  it "routes to songs as a nested resource of artist" do
+  it "routes to songs as a nested resource of an artist" do
     expect(get: artist_songs_path(1)).to route_to("songs#index", artist_id: "1")
   end
 
