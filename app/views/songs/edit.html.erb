@@ -1,7 +1,7 @@
 <h1>Editing <%= @song.title %></h1>
 <%= form_for @song  do |f| %>
 
-  <%= artist_select(@song, @artists) %>
+  Select Artist: <%= artist_select(@song, @artists) %>
   <br>
   <%= f.label :title %>
   <%= f.text_field :title %><br>

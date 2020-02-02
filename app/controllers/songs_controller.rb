@@ -53,6 +53,7 @@ end
     end
   else
     @song = Song.find(params[:id])
+    @artists = Artist.all
   end
   end
 
