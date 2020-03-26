@@ -1,8 +1,11 @@
-<%= form_for @song  do |f| %>
+<%= form_for([@artist, @song])  do |f| %>
+  <%= artist_select(@song.artist, @song) %>
   <%= f.label :title %>
   <%= f.text_field :title %><br>
   <%= f.label :artist_name %>
   <%= f.text_field :artist_name %>
+  <br>
+  Or select an existing artist:
   <br />
 
   <%= f.submit %>
