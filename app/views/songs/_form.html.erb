@@ -1,4 +1,7 @@
 <%= form_for @song  do |f| %>
+  <%= artist_select(@song) %> #Insert our helper method to cut down on logic in the view file.
+  <br>
+ 
   <%= f.label :title %>
   <%= f.text_field :title %><br>
   <%= f.label :artist_name %>
