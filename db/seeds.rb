@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 songs = [{artist_name: "The Killers", title: "Mr. Brightside"},
-         {artist_name: "The Killers", title: "Jenny Was a Friend of Mine"},
-         {artist_name: "Tommy Tutone", title: "Jenny"},
-         {artist_name: "Daft Punk", title: "Around the World"},
-         {artist_name: "Daft Punk", title: "Harder, Better, Faster, Stronger"},
-         {artist_name: "Pixies", title: "Where is My Mind?"},
-         {artist_name: "Pixies", title: "Gigantic"},
-         {artist_name: "Pixies", title: "Monkey Gone to Heaven"}]
+          {artist_name: "The Killers", title: "Jenny Was a Friend of Mine"},
+          {artist_name: "Tommy Tutone", title: "Jenny"},
+          {artist_name: "Daft Punk", title: "Around the World"},
+          {artist_name: "Daft Punk", title: "Harder, Better, Faster, Stronger"},
+          {artist_name: "Pixies", title: "Where is My Mind?"},
+          {artist_name: "Pixies", title: "Gigantic"},
+          {artist_name: "Pixies", title: "Monkey Gone to Heaven"}]
 
 songs.each do |song|
   Song.create(song)
