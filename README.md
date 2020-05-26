@@ -29,4 +29,5 @@ along with a `song` instance.
    artist's `songs` collection. Redirect to `/artists/:artist_id/songs` if not.
 7. Make sure all tests pass!
 
+
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/diy-nested-resources-lab' title='Modifying Nested Resources Lab'>Modifying Nested Resources Lab</a> on Learn.co and start learning to code for free.</p>
