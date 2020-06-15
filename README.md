@@ -1,3 +1,4 @@
+.
 # Modifying Nested Resources Lab
 
 ## Objectives
