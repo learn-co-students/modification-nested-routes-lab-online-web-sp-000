@@ -28,3 +28,4 @@ along with a `song` instance.
 6. Validate that songs being edited via nested routing are in the
    artist's `songs` collection. Redirect to `/artists/:artist_id/songs` if not.
 7. Make sure all tests pass!
+
