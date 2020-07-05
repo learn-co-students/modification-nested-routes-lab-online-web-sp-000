@@ -54,6 +54,7 @@ class SongsController < ApplicationController
         "Song not found" if @song.nil? 
       end 
     else  
+      
       @song = Song.find(params[:id])
     end 
   end
