@@ -1,3 +1,4 @@
+require 'pry'
 class ArtistsController < ApplicationController
   def index
     @artists = Artist.all
