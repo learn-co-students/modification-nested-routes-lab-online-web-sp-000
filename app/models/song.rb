@@ -10,3 +10,4 @@ class Song < ActiveRecord::Base
     self.artist = artist
   end
 end
+end
