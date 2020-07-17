@@ -1,5 +1,5 @@
 # Modifying Nested Resources Lab
-
+<%= link_to "New Song", new_artist_song_path(@artist) %>
 ## Objectives
 
 1. Implement nested resources for creation and modification
