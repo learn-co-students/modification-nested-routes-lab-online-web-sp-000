@@ -4,3 +4,7 @@ Rails.application.routes.draw do
   end
   resources :songs
 end
+
+#routes to songs as anested resource of an artist
+# routes to a song as a nested resource of an artist
+# newsong/editsong
