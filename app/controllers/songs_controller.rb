@@ -26,11 +26,24 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    if params[:artist_id]
+      @artist = Artist.find_by(id: params[:artist_id])
+      if @artist.nil?
+        redirect_to artists_path
+      else
+        @song.artist = @artist
+      end
+    end
   end
 
   def create
     @song = Song.new(song_params)
+    if params[:artist_id]
+      @song.artist = Artist.find_by(id: params[:artist_id])
+    end
 
+    @song.artist = Artist.find(params[:song][:artist_id])
+    
     if @song.save
       redirect_to @song
     else
@@ -39,7 +52,16 @@ class SongsController < ApplicationController
   end
 
   def edit
-    @song = Song.find(params[:id])
+    @song = Song.find_by(id: params[:id])
+
+    if params[:artist_id]
+      @artist = Artist.find_by(id: params[:artist_id])
+      if @artist.nil?
+        redirect_to artists_path
+      elsif @song.nil?
+        redirect_to artist_songs_path(@artist)
+      end
+    end
   end
 
   def update
