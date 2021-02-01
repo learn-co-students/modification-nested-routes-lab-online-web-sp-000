@@ -20,16 +20,27 @@ class SongsController < ApplicationController
         redirect_to artist_songs_path(@artist), alert: "Song not found"
       end
     else
-      @song = Song.find(params[:id])
+      @song = Song.find_by(id: params[:id])
     end
   end
 
   def new
-    @song = Song.new
+    if !params[:artist_id].blank?
+      @artist = Artist.find_by(id: params[:artist_id])
+      if @artist == nil
+        redirect_to artists_path
+      else
+        @song = Song.new(artist_id: params[:artist_id])
+      end
+    else
+      @song = Song.new
+    end
   end
 
   def create
-    @song = Song.new(song_params)
+    @artist = Artist.find_by(id: params[:song][:artist_id])
+    @song = Song.new
+    @song.artist_name = @artist.name
 
     if @song.save
       redirect_to @song
@@ -39,11 +50,26 @@ class SongsController < ApplicationController
   end
 
   def edit
-    @song = Song.find(params[:id])
+    puts params
+    @song = Song.find_by(id: params[:id])
+
+    if params[:artist_id].blank?
+      @in_song = true
+    else
+      @artist = Artist.find_by(id: params[:artist_id])
+      if @artist == nil
+        redirect_to artists_path
+      end
+      @song = Song.find_by(id: params[:id])
+      if @song.blank?
+        @in_song = false
+        redirect_to artist_songs_path(@artist)
+      end
+    end
   end
 
   def update
-    @song = Song.find(params[:id])
+    @song = Song.find_by(id: params[:id])
 
     @song.update(song_params)
 
@@ -67,4 +93,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
