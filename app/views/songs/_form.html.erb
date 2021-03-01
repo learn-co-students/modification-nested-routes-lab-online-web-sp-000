@@ -1,7 +1,8 @@
-<%= form_for @song  do |f| %>
-  <%= f.label :title %>
+<%= form_for(@song)  do |f| %>
+  <%= artist_id_field(@song) %>
+  <label>Song title:</label>
   <%= f.text_field :title %><br>
-  <%= f.label :artist_name %>
+  <label>Artist Name:</label>
   <%= f.text_field :artist_name %>
   <br />
 
