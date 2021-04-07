@@ -50,3 +50,4 @@ class ArtistsController < ApplicationController
     params.require(:artist).permit(:name)
   end
 end
+
