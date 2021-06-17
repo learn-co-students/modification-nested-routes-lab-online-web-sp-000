@@ -4,7 +4,6 @@ module ArtistsHelper
   end
 
   def artist_select(song, path)
-    binding.pry
     if song.artist && path == "nested"
       hidden_field_tag "song[artist_id]", song.artist_id
     else
@@ -12,9 +11,4 @@ module ArtistsHelper
     end
   end
 
-  def display_name(song, path)
-    if song.artist && path == "nested"
-      song.artist.name
-    end
-  end
 end
